@@ -5,7 +5,7 @@ class App < Sinatra::Base
     enable :sessions
     set :session_secret, 'flatiron'
   end
-  get '/' do 
+  get '/hello' do 
     erb :index
   end
   post '/checkout' do
