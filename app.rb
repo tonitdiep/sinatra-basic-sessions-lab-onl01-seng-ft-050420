@@ -5,13 +5,12 @@ class App < Sinatra::Base
     enable :sessions
     set :session_secret, 'flatiron'
   end
-  get '/hello' do 
+  get '/' do 
     erb :index
   end
   post '/checkout' do
     session[:item] = params[:item]
     @session = session
-    # erb :checkout
       
       # params
       # @session_hash = #key: item, value: the item the user entered to purchase 
